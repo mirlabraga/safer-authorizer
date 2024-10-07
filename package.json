@@ -1,0 +1,22 @@
+{
+  "name": "safer-authorizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirlabraga/safer-authorizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mirlabraga/safer-authorizer/issues"
+  },
+  "homepage": "https://github.com/mirlabraga/safer-authorizer#readme",
+  "dependencies": {
+    "@auth0/auth0-react": "^2.2.4"
+  }
+}
