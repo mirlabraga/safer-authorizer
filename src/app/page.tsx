@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Auth0Provider } from "@auth0/auth0-react";
-import App from "./App";
+import Profile from "./profile";
 
 export default function MyApp() {
   return (
@@ -10,11 +10,9 @@ export default function MyApp() {
       <Auth0Provider
         domain="http://localhost:3000"
         clientId="gS3C20Vt9iT7qy2yprLHjw7SuK8IDWjQ"
-        // authorizationParams={{
-        //   redirect_uri: window.location.origin,
-        // }}
+        onRedirectCallback={() => "http://localhost:3000"}
       >
-        <App/>
+        <Profile />
       </Auth0Provider>
     </div>
   );
