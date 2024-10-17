@@ -16,10 +16,11 @@ export default function MyApp() {
   return (
     <div>
       <Auth0Provider
-        domain="http://localhost:3000"
-        clientId="gS3C20Vt9iT7qy2yprLHjw7SuK8IDWjQ"
+        domain="dev-q7rj5o44.us.auth0.com"
+        clientId="BmCXzhkVGyzU9SH2n6EpqRQSBVabiPth"
         authorizationParams={{
-          redirect_uri: CallbackURI
+          redirect_uri: CallbackURI,
+          audience: "https://dev-q7rj5o44.us.auth0.com/api/v2/"
         }}
       >
         <Profile />
