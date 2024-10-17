@@ -12,13 +12,14 @@ const Profile = () => {
   if (isAuthenticated) {
     return (
       <div>
-        Hello {user?.name}{" "}
+        Hello {user?.name} {user?.email} Welcome! ! !
         <button
           onClick={() =>
             logout({ logoutParams: { returnTo: window.location.origin } })
           }
         >
-          Log Out
+          <br/>
+          <div>Log Out</div>
         </button>
       </div>
     );
