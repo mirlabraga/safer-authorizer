@@ -57,9 +57,9 @@ const PatientDashboard = () => {
     setListPatientByClinics([...list]);
   };
 
-  // useEffect(() => {
-  //   getListOfClinics();
-  // }, []);
+   useEffect(() => {
+     getListOfClinics();
+   }, []);
 
   return (
     <Container>
