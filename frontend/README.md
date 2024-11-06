@@ -17,6 +17,12 @@ $ npm run build
 $ npm run dev
 ```
 
+## Run the Test
+
+```bash
+$ npm run test
+```
+
 ## Run the Application in Prod
 
 ```bash

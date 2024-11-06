@@ -16,16 +16,14 @@ const TextField = styled.h3`
 `;
 
 const Login = () => {
-  const { user, isAuthenticated, loginWithRedirect, isLoading, logout } =
-    useAuth0();
+  const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
-
-  if (isAuthenticated) {
-    return (
-      <Container>
+  return (
+    <Container>
+      Login
+      <TextField aria-label="title-select-login">Login Page:</TextField>
+      (isAuthenticated) ?
+      <div>
         Hello {user?.name} {user?.email} Welcome! ! !
         <button
           onClick={() =>
@@ -35,16 +33,14 @@ const Login = () => {
           <br />
           <div>Log Out</div>
         </button>
-      </Container>
-    );
-  } else {
-    return (
-      <Container>
-        <TextField aria-label="title-select-clinic">Login Page:</TextField>
+      </div>
+      :
+      <div>
+        <TextField aria-label="title-select-login">Login Page:</TextField>
         <button onClick={() => loginWithRedirect()}>Log in</button>
-      </Container>
-    );
-  }
+      </div>
+    </Container>
+  );
 };
 
 export default Login;
