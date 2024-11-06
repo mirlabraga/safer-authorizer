@@ -20,10 +20,9 @@ const Login = () => {
 
   return (
     <Container>
-      Login
-      <TextField aria-label="title-select-login">Login Page:</TextField>
-      (isAuthenticated) ?
-      <div>
+      <TextField aria-label="title-select-login">Login Page</TextField>
+      {isAuthenticated ?
+      (<div>
         Hello {user?.name} {user?.email} Welcome! ! !
         <button
           onClick={() =>
@@ -33,12 +32,9 @@ const Login = () => {
           <br />
           <div>Log Out</div>
         </button>
-      </div>
-      :
-      <div>
-        <TextField aria-label="title-select-login">Login Page:</TextField>
+      </div>): (<div>
         <button onClick={() => loginWithRedirect()}>Log in</button>
-      </div>
+      </div>) }
     </Container>
   );
 };
