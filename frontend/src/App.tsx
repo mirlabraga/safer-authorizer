@@ -1,17 +1,13 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import PatientDashboard from "./pages/PatientDashboard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./authentication/Login";
 
 const App = () => {
+  
   return (
     <BrowserRouter>
-      <div>
+      <div data-testid="router-element">
         <Routes>
-          <Route path="/" element={<Navigate to="login" />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/callback" element={<Navigate to="login" />}></Route>
-
-          <Route path="/clinics" element={<PatientDashboard />}></Route>
+          <Route path="/" element={<Login />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
