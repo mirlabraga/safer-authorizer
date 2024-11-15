@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./authentication/Login";
-import PatientDashboard from "./pages/PatientDashboard";
+import PatientDashboard from "./pages/report/PatientDashboard";
 
 const App = () => {
   

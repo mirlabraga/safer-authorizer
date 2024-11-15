@@ -2,8 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import BASE_URL from "../libs/api";
-import { Clinic, Patient } from "../libs/model";
+import BASE_URL from "../../libs/api";
+import { Clinic, Patient } from "../../libs/model";
+import Template from "../template/Template";
 
 const Container = styled.div`
   display: flex;
@@ -63,6 +64,7 @@ const PatientDashboard = () => {
 
   return (
     <Container>
+      <Template/>
       <TextField aria-label="title-select-clinic">Select a Clinic:</TextField>
       <Select
         test-id="select-clinic"
