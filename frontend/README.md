@@ -28,3 +28,7 @@ $ npm run test
 ```bash
 $ npm run start
 ```
+
+1 - Checking the router
+2 - Call the backend side
+
