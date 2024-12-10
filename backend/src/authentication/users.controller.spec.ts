@@ -20,14 +20,11 @@ describe('UsersController', () => {
 
   describe('GET /users', () => {
     it('should return an array of users', async () => {
-      // const result = [
-      //   { id: '1', name: 'Salve Fertility' },
-      //   { id: '2', name: 'London IVF' },
-      // ];
+      const token = '';
       jest
-        .spyOn(UsersService.prototype, 'getClinics')
+        .spyOn(UsersService.prototype, 'postRefreshToken')
         .mockImplementation(() => null);
-      expect(await controller.getClinics()).toStrictEqual(null);
+      expect(await controller.postRefreshToken(token)).toStrictEqual(null);
     });
   });
 });
