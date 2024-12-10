@@ -1,7 +1,7 @@
 "use client";
 
 import { useAuth0 } from "@auth0/auth0-react";
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Menu from "./Menu";
 import Head from "./Head";
@@ -20,6 +20,17 @@ const Root = styled.div`
 
 const Template = () => {
   const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
+  const refreshToken = async () => {
+    await fetch("http://localhost:3000/refresh-token", {
+      method: "POST",
+      body: JSON.stringify({ token: "example" }),
+    });
+  };
+
+  useEffect(() => {
+    refreshToken();
+  }, []);
 
   return (
     <Container>
